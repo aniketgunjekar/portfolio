@@ -1,0 +1,104 @@
+body {
+    margin:0 0 0 0;
+    padding: 1rem 0 1rem 0;
+    font-family: 'Maven Pro', sans-serif;
+  }
+  
+  main {
+    background-color: #d6d1d1;
+  }
+  
+  header {
+    padding-top: 0.8rem
+  }
+  
+  header > h1, p {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    padding: 0px;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2.3rem;
+  }
+  
+  
+  #img-div {
+    background-color: white;
+    padding: 0.5rem 1rem 1rem 1rem;
+    margin: 0.8rem
+  }
+  
+  .image-container {
+    max-width: 1024px;
+    margin: auto;
+  }
+  
+  #image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  #img-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  section {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  section li {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  section h3 {
+    text-align: center;
+    margin: 3rem 0 3rem 0;
+  }
+  
+  section span {
+    font-weight: 700;
+  }
+  
+  blockquote {
+    margin: 0rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem
+  }
+  
+  blockquote p, cite {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-size: 1rem;
+  }
+  
+  footer {
+    margin: auto;
+    padding: 1rem;
+    padding-bottom: 0;
+    max-width: 800px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  footer address {
+    font-style: normal;
+  }
+  

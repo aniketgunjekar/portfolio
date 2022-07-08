@@ -1,0 +1,238 @@
+html {
+    font-size: 80%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0px;
+    padding: 8vh 0 0 0 ;
+    background-color: rgb(230, 230, 230);
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(230, 230, 230);
+  }
+  
+  header img {
+    max-width: 14rem;
+    min-width: 10rem;
+    margin: 0px;
+  }
+  
+  #nav-bar {
+    width: 32rem;
+    padding: 0px;
+    margin: 0 5vw 0 15vw;
+  }
+  
+  #nav-bar ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+  }
+  
+  #nav-bar li {
+    margin: 0px;
+    padding: 5px;
+    transition: background-color 0.18s;
+  }
+  
+  #nav-bar li:hover {
+    background-color: rgb(245, 190, 5);
+  }
+  
+  #nav-bar a {
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+  }
+  
+  #email, #submit {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  #submit {
+    background-color: rgb(245, 190, 5);
+    padding: 4px 7px;
+    border-style: none;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    transition: background-color 0.3s;
+  }
+  
+  #submit:hover {
+    background-color: rgb(255, 155, 5);
+  }
+  
+  #email {
+    width: 200px;
+    height: 25px;
+    border: 1px solid grey;
+  }
+  
+  .formsec h2 {
+   text-align: center;
+   margin-bottom: 5px;
+   margin-top: 3px;
+  }
+  
+  .flex1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 750px;
+    margin: 0 auto 2.5rem auto;
+  
+  }
+  
+  .icon-cover {
+    min-width: 6rem;
+    min-height: 4.5rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon {
+    font-size: 3.2rem;
+    color: rgb(255, 125, 5);
+    padding: 0;
+    margin: auto;
+  }
+  
+  .description {
+    max-width: 650px;
+  }
+  
+  .description h2 {
+    margin: 0;
+  }
+  
+  .description p {
+    margin: 0;
+  }
+  
+  #video {
+    display: block;
+    margin: 3rem auto;
+  }
+  
+  #pricing {
+    display: flex;
+    max-width: 850px;
+    margin: auto;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+  .pricebox {
+    margin: 0.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 1rem 0;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  
+  .pricebox h3 {
+    margin-top: 0;
+    padding: 1rem 0 1rem 0;
+    background-color: rgb(190, 188, 188);
+  }
+  
+  .pricebox ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 1.4rem auto 0 auto;
+    line-height: 2rem;
+  }
+  
+  .pricebox button {
+   padding: 0.8rem;
+   margin-top: 1.4rem;
+   background-color: rgb(255,200,5);
+   border: 1px solid grey;
+   transition: background-color 0.2s
+  }
+  
+  .pricebox button:hover {
+   background-color: rgb(255, 155, 5);
+   border: 1px solid white;
+   cursor: pointer;
+  }
+  
+  .pricebox button:active {
+    background-color: orangered;
+  }
+  
+  footer {
+    background-color: rgb(197, 191, 191);
+    padding: 1rem;
+    max-width: 814px;
+    margin: auto;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  
+  footer li {
+    margin: 0.4rem;
+  }
+  
+  footer p {
+    text-align: right;
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #pricing {
+    display: flex;
+    flex-direction: column;
+    max-width: 22rem;
+    margin: auto;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+  #nav-bar ul {
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    text-align: right;
+    line-height: 0.5rem;
+    float: right;
+  }
+  
+  header {
+    height: 12vh;
+  }
+  
+  header img {
+    max-width: 10rem;
+    min-width: 8rem;
+  }
+  
+  #nav-bar {
+    margin-right: 5px
+  }
+  body {
+    padding: 12vh 0 0 0 ;
+  }

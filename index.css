@@ -1,0 +1,45 @@
+body {
+    font-size: 2rem;
+    font-style: sans-serif;
+}
+
+a {
+    display: block;
+    font-style: bold;
+    border: red;
+    background-color: grey;
+}
+
+span {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10rem;
+}
+
+.loading {
+    height: 3rem;
+    width: 50%;
+    border-radius: 1rem;
+    box-shadow: inset 1px 1px 1px 1px grey;
+    border-width: 3px;
+    border-color: black;
+    background-color: rgb(218, 216, 216);
+    display: block;
+}
+
+.green {
+    background-color: rgb(10, 175, 10);
+    border-radius: 1rem;
+    height: 100%;
+    animation-name: loadingbar;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+@keyframes loadingbar {
+    5% {
+        width: 5%;
+    }
+    100% {
+        width: 100%;
+    }
+}

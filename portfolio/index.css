@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+  }
+  
+  :root{
+    --welcome-page1: #3a3d40;
+    --welcome-page2: #181719;
+    --header1: #be3144;
+    --main-background: #45567d;
+    --font-color1: #f0f0f0;
+    --tile-background1: #303841;
+  }
+  
+  body {
+    margin:10vh 0 0 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  main {
+    background-color: var(--main-background);
+  }
+  
+  #navbar {
+    background-color: var(--header1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 3;
+  }
+  
+  #navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin:0 3vw 0 0;
+    padding:0;
+    width: 20vw;
+    min-width: 25rem;
+    float: right;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  
+  #navbar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10rem;
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in;
+  }
+  
+  #navbar li:hover {
+    background-color: var(--main-background);
+    cursor: pointer;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    font-size: 200%;
+    color: var(--font-color1);
+  }
+  
+  #welcome-section {
+    height: calc(100vh - 10vh);
+    background: linear-gradient(
+      62deg,
+      var(--welcome-page1),
+      var(--welcome-page2)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #welcome-section h1 {
+    font-size: 450%;
+    color: var(--font-color1);
+    text-align: center;
+  }
+  
+  #welcome-section p {
+    font-size: 280%;
+    margin: 0 0 15rem 0;
+    color: var(--header1);
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+  }
+  
+  #projects {
+    margin: 8rem 0;
+  }
+  
+  #projects h2 {
+    text-align: center;
+    font-size: 300%;
+    color: var(--font-color1);
+    margin: 0 auto 6rem auto; 
+    padding-bottom: 0.4rem;
+    max-width: 45rem;
+    border-bottom: 3px solid;
+    border-radius: 2px;
+  }
+  
+  .project-grid {
+    box-sizing: border-box;
+    display: grid;
+    /* TARGET: TO ACHIEVE THE ASPECT RATIO OF [1 : 1.2];
+       initial width(/tile)= (100vw-6rem)/3 [system calculated]
+       max width(/tile)= [(1100px + 6rem-6rem(padding))/3] = 366.66px [fixed-value]  */
+    grid-template-columns: repeat(3, 1fr);
+    max-width: calc(1100px + 6rem);
+    margin: 0 auto;
+    padding: 0rem 3rem;
+    gap: 3rem;
+  }
+  
+  .project-tile {
+    background-color: var(--tile-background1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*  TARGET: TO ACHIEVE THE ASPECT RATIO OF [1 : 1.2];
+        initial height=((100vw - 6rem) / 3) * 1.2 [i.e 120% of initial width]
+        max-height= 120% of max-width
+                  = 366.66px * 1.2 [fixed-value]
+        max-height = +30? */
+    height: calc(((100vw - 6rem) / 3) * 1.2);
+    max-height: calc((((1100px + 30px + 6rem) - 6rem) / 3) * 1.2);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0 8px 0.5px var(--welcome-page2);
+    transition: 0.3s;
+    color: var(--tile-background1);
+  }
+  
+  .project-tile:hover {
+    color: #e91a36;
+    box-shadow: 0 0 4px 0.2px var(--welcome-page2);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .project-tile:active {
+    opacity: 0.8;
+  }
+  
+  .project-tile img {
+    flex-basis: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: none;
+  }
+  
+  .project-tile h3 {
+    margin: 6% auto;
+    font-size: 160%;
+    text-align: center;
+  }
+  
+  .project-tile .tile-h {
+    color: var(--font-color1);
+    text-align: center;
+  }
+  
+  .project-tile code {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  code.left {
+    padding: 0 0.5rem 0 0;
+  }
+  
+  code.right {
+    padding: 0 0 0 0.5rem;
+  }
+  
+  .morebutton {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 5rem auto 0 auto;
+    padding-left: 9rem;
+    padding-top: 0.5rem;
+    display: block;
+    max-width: 12rem;
+    height: 3.8rem;
+    font-size: 200%;
+    border-radius: 0.3rem;
+    background-color: var(--tile-background1);
+    color: var(--font-color1);
+    position: relative;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 8px 0.5px var(--welcome-page2);
+  }
+  
+  .morebutton span{
+    position: absolute;
+    width: 8rem;
+    left: 0.4rem;
+    top: 0.5rem;
+  }
+  
+  .morebutton:hover {
+    background-color: var(--header1);
+    padding-left: 10.1rem;
+    box-shadow: 0 0 4px 0.2px var(--welcome-page2);
+    transition: 0.2s ease-in-out;
+  }
+  
+  #contact {
+    height: 75vh;
+    background-color: var(--tile-background1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-color1);
+  }
+  
+  #contact h1 {
+    font-size: 400%;
+    text-align: center;
+    margin-top: 13rem;
+  }
+  
+  #contact p {
+    font-size: 140%;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  #contact .ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 175%;
+    max-width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 7rem;
+  }
+  
+  #contact a {
+    margin: 0 2rem;
+    text-decoration: none;
+    color: var(--font-color1);
+    transition: .4s ease-out;
+    height: 3rem;
+  }
+  
+  #contact a:hover {
+    height: 2rem;
+    padding-top: 1rem;
+    transition: 0.4s ease-out;
+  }
+  
+  footer {
+    height: 15vh;
+    border-top: 5px solid var(--header1);
+    background-color: var(--tile-background1);
+  }
+  
+  footer address {
+    float: right;
+    margin: 7vh 1.5rem 0 0;
+    color: var(--font-color1);
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (max-width: 940px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .project-tile {
+      height: calc(((100vw - 6rem) / 2) * 1.2);
+      max-height: calc((((1100px + 30px + 6rem) - 6rem) / 2) * 1.2);
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-tile {
+      height: calc(((100vw - 6rem) / 1) * 1.2);
+      max-height: calc((((1100px + 30px + 6rem) - 6rem) / 1) * 1.2);
+    }
+  }
